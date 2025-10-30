@@ -90,7 +90,7 @@ async def callback_update_rating(callback: CallbackQuery, state: FSMContext) -> 
     
     movies = await get_watched_movies(added_by=str(callback.from_user.id))
     for num, movie in enumerate(movies):
-        text += f"{num+1}. <code>{movie.title}</code> {"(" + str(movie.rating) + ")" if movie.rating != None else "(без оценки)"}\n"
+        text += f"{num+1}. <code>{movie.title}</code> {'(' + str(movie.rating) + ')' if movie.rating != None else '(без оценки)'}\n"
     text +="\n<i>Введите название фильма (можете нажать на название и оно скопируется в буфер обмена)</i>"
         
     await callback.message.answer(

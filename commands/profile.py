@@ -24,7 +24,7 @@ async def command_profile(message: Message) -> None:
             text=(
                 f"<blockquote>👤 Профиль</blockquote>\n\n"
                 f"ID - <code>{user.user_id}</code>\n"
-                f"Дата регистрации - <b>{user.created_at.strftime("%d.%m.%Y")}</b>"
+f"Дата регистрации - <b>{user.created_at.strftime('%d.%m.%Y')}</b>"
             ),
             reply_markup= ikb_profile() 
         )
@@ -43,7 +43,7 @@ async def callback_profile(callback: CallbackQuery) -> None:
             text=(
                 f"<blockquote>👤 Профиль</blockquote>\n\n"
                 f"ID - <code>{user.user_id}</code>\n"
-                f"Дата регистрации - <b>{user.created_at.strftime("%d.%m.%Y")}</b>"
+f"Дата регистрации - <b>{user.created_at.strftime('%d.%m.%Y')}</b>"
             ),
             reply_markup= ikb_profile()
     )
